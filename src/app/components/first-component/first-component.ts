@@ -1,11 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-first-component',
   imports: [],
   templateUrl: './first-component.html',
-  styleUrl: './first-component.css',
+  styleUrls: ['./first-component.css'],
 })
-export class FirstComponent {
+export class FirstComponent implements OnInit {
+
+  name: string = 'Adler';
+  age: number = 22;
+  job = "Developer";
+  hobbies = ['Games', 'Series', 'Movies'];
+  car = {
+    name: 'Gol',
+    year: 2020,
+    color: 'White'
+  }
+  
+  constructor() {}
+
+  ngOnInit(): void {}
+
 
 }
